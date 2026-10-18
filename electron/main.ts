@@ -76,6 +76,22 @@ app.whenReady().then(async () => {
       console.error('Error saving wallpaper to db', e);
     }
   });
+
+  ipcMain.on('toggle-fullscreen', () => {
+    if (mainWindow) {
+      mainWindow.setFullScreen(!mainWindow.isFullScreen());
+    }
+  });
+
+  ipcMain.on('set-fullscreen', (_event, flag: boolean) => {
+    if (mainWindow) {
+      mainWindow.setFullScreen(flag);
+    }
+  });
+
+  ipcMain.handle('is-fullscreen', () => {
+    return mainWindow ? mainWindow.isFullScreen() : false;
+  });
 });
 
 app.on('window-all-closed', () => {

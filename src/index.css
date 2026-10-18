@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 :root {
-  /* Core Variables */
-  --font-main: 'Outfit', sans-serif;
+  /* Core Typography Variables */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   /* Theme: Minimal Dark (Default) */
   --bg-color: #121212;
@@ -22,56 +23,123 @@
 }
 
 [data-theme='dark'] {
-  --bg-color: #121212;
+  --bg-color: #14161c;
+  --bg-image: linear-gradient(145deg, #181a22 0%, #101116 100%);
   --text-primary: #ededed;
-  --text-secondary: #a0a0a0;
-  --panel-bg: #1a1a1a;
-  --panel-border: #2a2a2a;
+  --text-secondary: #94a3b8;
+  --panel-bg: rgba(26, 28, 36, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.12);
   --accent-primary: #ffffff;
   --accent-text: #000000;
   --accent-hover: #e0e0e0;
 }
 
 [data-theme='light'] {
-  --bg-color: #e5e7eb;
-  --text-primary: #111111;
-  --text-secondary: #4b5563;
-  --panel-bg: #ffffff;
-  --panel-border: #d1d5db;
-  --accent-primary: #000000;
+  --bg-color: #f4f1ea;
+  --bg-image: linear-gradient(145deg, #f7f5ef 0%, #ebe6dc 100%);
+  --text-primary: #292524;
+  --text-secondary: #78716c;
+  --panel-bg: rgba(255, 255, 255, 0.85);
+  --panel-border: rgba(0, 0, 0, 0.1);
+  --accent-primary: #292524;
   --accent-text: #ffffff;
-  --accent-hover: #333333;
+  --accent-hover: #44403c;
 }
 
 [data-theme='gradient'] {
-  --bg-color: #e0c3fc;
-  --bg-image: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-  --panel-bg: rgba(255, 255, 255, 0.6);
-  --panel-border: rgba(255, 255, 255, 0.4);
-  --text-primary: #1a1a1a;
-  --text-secondary: #4a4a4a;
+  --bg-color: #211c2b;
+  --bg-image: linear-gradient(140deg, #1b1724 0%, #292338 50%, #3d3452 100%);
+  --panel-bg: rgba(41, 35, 56, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.12);
+  --text-primary: #f5f3ff;
+  --text-secondary: #c4b5fd;
+  --accent-primary: #a78bfa;
+  --accent-text: #1b1724;
+  --accent-hover: #c4b5fd;
 }
 
 [data-theme='ocean'] {
   --bg-color: #0f172a;
-  --text-primary: #e2e8f0;
+  --bg-image: linear-gradient(140deg, #0b1324 0%, #152238 50%, #1a324b 100%);
+  --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --panel-bg: rgba(30, 41, 59, 0.7);
-  --panel-border: rgba(51, 65, 85, 0.5);
+  --panel-bg: rgba(21, 34, 56, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.12);
   --accent-primary: #38bdf8;
   --accent-text: #020617;
   --accent-hover: #7dd3fc;
 }
 
 [data-theme='sunset'] {
-  --bg-color: #451a03;
+  --bg-color: #261715;
+  --bg-image: linear-gradient(140deg, #231513 0%, #361f1a 50%, #502e26 100%);
   --text-primary: #fef3c7;
-  --text-secondary: #fcd34d;
-  --panel-bg: rgba(120, 53, 15, 0.7);
-  --panel-border: rgba(146, 64, 14, 0.5);
+  --text-secondary: #e2b196;
+  --panel-bg: rgba(54, 31, 26, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.12);
   --accent-primary: #f59e0b;
-  --accent-text: #451a03;
+  --accent-text: #261715;
   --accent-hover: #fbbf24;
+}
+
+[data-theme='mac-sonoma'] {
+  --bg-color: #16202e;
+  --bg-image: linear-gradient(140deg, #131b27 0%, #1e2c3f 40%, #443c44 70%, #7d5948 100%);
+  --panel-bg: rgba(30, 44, 63, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.14);
+  --text-primary: #ffffff;
+  --text-secondary: #e2d5ce;
+  --accent-primary: #d4a373;
+  --accent-text: #131b27;
+  --accent-hover: #e0a96d;
+}
+
+[data-theme='mac-ventura'] {
+  --bg-color: #101c2c;
+  --bg-image: linear-gradient(140deg, #0d1724 0%, #16283d 40%, #3a4755 70%, #8c6742 100%);
+  --panel-bg: rgba(22, 40, 61, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.14);
+  --text-primary: #ffffff;
+  --text-secondary: #fed7aa;
+  --accent-primary: #d97706;
+  --accent-text: #0d1724;
+  --accent-hover: #b45309;
+}
+
+[data-theme='mac-monterey'] {
+  --bg-color: #151022;
+  --bg-image: linear-gradient(140deg, #110d1c 0%, #211836 45%, #3c2755 75%, #593977 100%);
+  --panel-bg: rgba(33, 24, 54, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.14);
+  --text-primary: #ffffff;
+  --text-secondary: #e9d5ff;
+  --accent-primary: #c084fc;
+  --accent-text: #110d1c;
+  --accent-hover: #a855f7;
+}
+
+[data-theme='mac-bigsur'] {
+  --bg-color: #0d1f24;
+  --bg-image: linear-gradient(140deg, #0a191d 0%, #13333b 35%, #224d4b 65%, #6e4e37 100%);
+  --panel-bg: rgba(19, 51, 59, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.14);
+  --text-primary: #ffffff;
+  --text-secondary: #ffedd5;
+  --accent-primary: #ca8a04;
+  --accent-text: #0a191d;
+  --accent-hover: #a16207;
+}
+
+[data-theme='mac-sequoia'] {
+  --bg-color: #111a15;
+  --bg-image: linear-gradient(140deg, #0e1612 0%, #18271f 40%, #2b392b 70%, #5e4f3c 100%);
+  --panel-bg: rgba(24, 39, 31, 0.75);
+  --panel-border: rgba(255, 255, 255, 0.14);
+  --text-primary: #ffffff;
+  --text-secondary: #dcfce7;
+  --accent-primary: #86efac;
+  --accent-text: #0e1612;
+  --accent-hover: #4ade80;
 }
 
 * {
@@ -94,6 +162,40 @@ body {
 select option {
   background: var(--panel-bg);
   color: var(--text-primary);
+}
+
+/* Modern SaaS Typography System for Headings */
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.03em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* Minimalist Panel Container */

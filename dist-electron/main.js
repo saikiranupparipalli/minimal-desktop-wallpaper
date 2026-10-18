@@ -109,6 +109,19 @@ electron_1.app.whenReady().then(async () => {
             console.error('Error saving wallpaper to db', e);
         }
     });
+    electron_1.ipcMain.on('toggle-fullscreen', () => {
+        if (mainWindow) {
+            mainWindow.setFullScreen(!mainWindow.isFullScreen());
+        }
+    });
+    electron_1.ipcMain.on('set-fullscreen', (_event, flag) => {
+        if (mainWindow) {
+            mainWindow.setFullScreen(flag);
+        }
+    });
+    electron_1.ipcMain.handle('is-fullscreen', () => {
+        return mainWindow ? mainWindow.isFullScreen() : false;
+    });
 });
 electron_1.app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
